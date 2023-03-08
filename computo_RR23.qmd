@@ -22,7 +22,7 @@ author:
   - name: Nelle Varoquau
     afiliation: Université Grenoble Alpes/CNRS
 format:
-  computo-pdf: default
+  computo-html: default
 abstract: >
   Computo is a newborn journal published by the [French Statistical Society](https://sfds.asso.fr/) which aims at promoting computational/algorithmic contributions in statistics and machine learning. In order to achieve this goal, Computo goes beyond classical static publications by leveraging technical advances in literate programming and scientific reporting. We present in this talk the solution that we put in place so far to support both editorial and scientific reproducibility, that relies on community-based tools like Quarto, Github actions and open review. See our webpage \url{https://computo.sfds.asso.fr/}, and github group \url{https://github.com/computorg}.
 keywords: Reproducible research --  Statistics -- Machine-Learning -- Quarto -- R -- Python -- Julia 
@@ -96,3 +96,6 @@ Once a manuscript is accepted, its reviews are made available on the finally ren
 
 At the moment, we have [3 published contributions](https://computo.sfds.asso.fr/publications/) and are processing 5 additional submissions. We strongly encourage you to submit your work to our journal.
 
+## Perspectives
+
+Boundaries between “editorial” and “scientific” reproductibilities are not always clear and may be blurred or moving. For example, some contributions which computational workloads completely fits the CI rendering process and provides also near-perfect reproductibility of their materials, if approved, achieve both reproductibilies in a single step. But other contributions, for example involving simulations, large amount of datas or complex deep-learning models may require a more “hands-on” reproductibility process. One of the perspective of Computo is to broaden the automated reproductibility scope to include more and more “scientific” reproductibility, and, ultimately, to provide authors a full array of computational ressources to allow them to include their own scientific reproductible results in the editorial process.

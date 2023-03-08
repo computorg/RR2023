@@ -66,7 +66,7 @@ More details can be found in the following templates, which serve as material fo
 
 ::: {.callout-note}
 ### Warning
-We insist on the fact that Computo is not just about publishing a notebook and proving that your notebook can be compiled with CI. This part of the process is what we call _"Editorial Reproductibility"_. _"Scientific"_ or _"numerical"_ reproducibility^[We don't ask people reproducing their data... yet!] of all the analyses is also mandatory to published in Computo, as well as a classical peer-review evaluation.
+We insist on the fact that Computo is not just about publishing a notebook and proving that your notebook can be compiled with CI. This part of the process is what we call _"Editorial Reproducibility"_. _"Scientific"_ or _"numerical"_ reproducibility^[We don't ask people reproducing their data... yet!] of all the analyses is also mandatory to published in Computo, as well as a classical peer-review evaluation.
 :::
 
 ### Available templates
@@ -99,4 +99,4 @@ At the moment, we have [3 published contributions](https://computo.sfds.asso.fr/
 
 ## Perspectives
 
-Boundaries between “editorial” and “scientific/numerical” reproducibilities are not always clear and may be blurred or moving. For example, some contributions which computational workloads completely fits the CI rendering process and provides also near-perfect reproducibility of their materials, if approved, achieve both reproducibilities in a single step. But other contributions, for example involving simulations, large amount of datas or complex deep-learning models may require a more “hands-on” reproducibility process. One of the perspectives of Computo is to broaden the automated reproducibility scope to include more and more “scientific” reproducibility, and, ultimately, to provide authors a full array of computational ressources to allow them to include their own scientific/numerical reproducibility developing process in the editorial one.
+Boundaries between “editorial” and “scientific/numerical” reproducibilities are not always clear and may be blurred or moving. For example, some contributions which computational workload completely fits the CI rendering process and provides also near-perfect reproducibility of their materials, if approved, achieve both reproducibilities in a single step. But other contributions, for example involving simulations, large amount of data or complex deep-learning models may require a more “hands-on” reproducibility process. One of the perspectives of Computo is to broaden the automated reproducibility scope to include more and more “scientific” reproducibility, and, ultimately, to provide authors a full array of computational resources to allow them to include their own scientific/numerical reproducibility developing process in the editorial one.

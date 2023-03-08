@@ -81,6 +81,10 @@ If you are attached to Jupyter book or do not prefer to use Quarto, you are stil
 
 - [Jupyter Myst template](https://github.com/computorg/template-computo-myst)
 
+### Note on the use of [Quarto](https://quarto.org/)
+
+Our choice to rely on Quarto has been carefully considered. Leveraging years of experience in literate programming and scientific reporting with Rmarkdown, RStudio (the enterprise behind the RStudio IDE) decided to make python (and julia) communities benefit from it with Quarto as a standalone, language-agnostic publishing tool. We strongly encourage authors to use Quarto, as it offers numerous publishing oriented features, with an extended support for various outputs (online web pages and journal-quality rendered pdf), a simple and centralized workflow, and one of the best-in-class literate programming experience.  
+
 ##  Reviewing and publication
 
 Submitted papers are reviewed by external reviewers selected by the Associate Editor in charge of the paper. Computo strives for fast reviewing cycles, but cannot provide strict guarantees on the matter; the current time between submission and publication is under six months.

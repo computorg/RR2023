@@ -6,7 +6,7 @@ date-modified: last-modified
 toc: false
 author:
   - name: Julien Chiquet
-    affiliation: Univerisité Paris-Saclay/AgroParisTech/INRAE
+    affiliation: Université Paris-Saclay/AgroParisTech/INRAE
     orcid: 0000-0002-3629-3429
     email: julien.chiquet@inrae.fr
     corresponding: true
@@ -49,7 +49,7 @@ keywords: [Reproducible research -- Statistics -- Machine-Learning -- Quarto -- 
 
 ### An open access journal with reproducible contributions
 
-*Computo* is free for readers and authors. It is a diamond open access journal [@ancion2022] which means that all contents are freely published without any fee for the authors, and are freely available without any charge to the reader or their institution. Users are allowed to read, download, copy, distribute, print, search, or link to the full texts of the articles, or use them for any other lawful purpose, without asking prior permission from the publisher or the author^[as long as original authors are duly cited]. This is in accordance with the [Budapest Open Access Initiative (BOAI)](https://www.budapestopenaccessinitiative.org/) definition of open access and with the [Plan S](https://www.coalition-s.org/addendum-to-the-coalition-s-guidance-on-the-implementation-of-plan-s/principles-and-implementation/) initiative [@planS].
+*Computo* is free for readers and authors. It is a diamond open access journal [@ancion2022] which means that all contents are freely published without any fee for the authors, and are freely available without any charge to the reader or their institution. Users are allowed to read, download, copy, distribute, print, search, or link to the full texts of the articles, or use them for any other lawful purpose, without asking prior permission from the publisher or the author^[as long as original authors are duly cited.]. This is in accordance with the [Budapest Open Access Initiative (BOAI)](https://www.budapestopenaccessinitiative.org/) definition of open access and with the [Plan S](https://www.coalition-s.org/addendum-to-the-coalition-s-guidance-on-the-implementation-of-plan-s/principles-and-implementation/) initiative [@planS].
 
 The reproducibility of numerical results is a necessary condition for publication in *Computo*. In particular, submissions must include all necessary data (e.g. via Zenodo repositories) and codes. For contributions featuring the implementation of methods/algorithms, the quality of the provided code is assessed during the review process.
 
@@ -59,18 +59,18 @@ The reviews are open, i.e. visible to any reader after acceptance of the contrib
 
 ### Overview
 
-Submissions require both scientific content (equations, codes and figures, data) and a proof that this content is reproducible. This is achieved by means of i) a notebook system, ii) a virtual environment fixing the dependencies and iii) continuous integration (plus, if needed, an external data repository to store data files such as [Zenodo](https://zenodo.org/) [@zenodo] or [OSF](https://osf.io/) [@foster2017]). A *Computo* submission is thus a git repository containing
+Submissions require both scientific content (equations, codes and figures, data) and a proof that this content is reproducible. This is achieved by means of a notebook system, a virtual environment fixing the dependencies and continuous integration (plus, if needed, an external data repository to store data files such as [Zenodo](https://zenodo.org/) [@zenodo] or [OSF](https://osf.io/) [@foster2017]). A *Computo* submission is thus a git repository containing
 
-- the source file of the notebook with auxiliary files: a markdown file with yaml metadata and some statics files, e.g. figures or small .csv data tables
-- configuration files to set up the dependencies in a virtual environment
-- configuration files to set up the continuous integration rendering the final documents
+- the source file of the notebook with auxiliary files: a markdown file with yaml metadata and some statics files, e.g. figures or small .csv data tables;
+- configuration files to set up the dependencies in a virtual environment;
+- configuration files to set up the continuous integration rendering the final documents.
 
 The compiled notebook (HTML and PDF) is directly generated in the git repository via continuous integration (e.g., Github action or Gitlab CI) and published, if successful, to a web page (e.g. gh-page). The PDF and the git repository address are then submitted to our submission platform.
 
 ::: {.callout-note}
 ### On the use of [Quarto](https://quarto.org/)
 
-Our choice to rely on `Quarto` has been carefully considered. Leveraging its experience in literate programming [@knuth1984] with [`Rmarkdown`](https://pkgs.rstudio.com/rmarkdown/) [@rmarkdown] and relying on top community tools like universal document converter [`Pandoc`](https://pandoc.org/), RStudio/Posit developed [`Quarto`](https://quarto.org/), a standalone, language-agnostic publishing tool^[including support for R, Python, Julia and Observable JS]. This point was decisive for the editorial committee of *Computo*, which in no way wishes to privilege one language over another. We thus encourage authors to use Quarto, which hopefully offer numerous publishing oriented features, a centralized workflow which facilitates the final production, and a literate programming experience well adapted to VScode/Rstudio/Neovim users.
+Our choice to rely on `Quarto` has been carefully considered. Leveraging its experience in literate programming [@knuth1984] with [`Rmarkdown`](https://pkgs.rstudio.com/rmarkdown/) [@rmarkdown] and relying on top community tools like universal document converter [`Pandoc`](https://pandoc.org/) [@pandoc], RStudio/Posit developed [`Quarto`](https://quarto.org/) [@quarto], a standalone, language-agnostic publishing tool^[including support for R, Python, Julia and Observable JS.]. This point was decisive for the editorial committee of *Computo*, which in no way wishes to privilege one language over another. We thus encourage authors to use Quarto, which hopefully offer numerous publishing oriented features, a centralized workflow which facilitates the final production, and a literate programming experience well adapted to VScode/Rstudio/Neovim users.
 :::
 
 ::: {.callout-warning}
@@ -94,17 +94,9 @@ If you are attached to Jupyter book or do not prefer to use Quarto, you are stil
 
 ##  Reviewing and publication
 
-Submitted papers are reviewed by external reviewers selected by the Associate Editor in charge of the paper. *Computo* strives for fast reviewing cycles, but cannot provide strict guarantees on the matter; the current time between submission and publication is under six months.
+Submitted papers are reviewed by external reviewers selected by the Associate Editor in charge of the paper. *Computo* strives for fast reviewing cycles, but cannot provide strict guarantees on the matter; the current time between submission and publication is under six months. In order to ensure an efficient reviewing process, authors are requested upon submission to suggest the names of four potential referees. To avoid conflicts of interests, recent co-authors or collaborators should not be suggested. At the moment, *Computo* relies on [Scholastica](https://scholasticahq.com/) for the review process. We plan to migrate very soon to the [openreview plateform](https://openreview.net/).
 
-In order to ensure an efficient reviewing process, authors are requested upon submission to suggest the names of four potential referees. To avoid conflicts of interests, recent co-authors or collaborators should not be suggested.
-
-*Computo*’s accepted papers are published electronically immediately upon receipt under [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/) [@ccby4]. Authors retain the copyright and full publishing rights without restrictions.
-
-At the moment, *Computo* relies on [Scholastica](https://scholasticahq.com/) for the review process. We plan to migrate very soon to the [openreview plateform](https://openreview.net/).
-
-Once a manuscript is accepted, its reviews are made available on the finally rendered article as an issues associated to the git repository. Reviewers can choose to remain anonymous or not.
-
-## Published papers
+Once a manuscript is accepted, its reviews are made available on the finally rendered article as an issues associated to the git repository. Reviewers can choose to remain anonymous or not. *Computo*’s accepted papers are published electronically immediately upon receipt under [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/) [@ccby4]. Authors retain the copyright and full publishing rights without restrictions. 
 
 At the moment, we have [3 published contributions](https://computo.sfds.asso.fr/publications/) and are processing 6 additional submissions. We strongly encourage you to submit your work to our journal.
 

@@ -7,20 +7,27 @@ toc: false
 author:
   - name: Julien Chiquet
     affiliation: Univerisité Paris-Saclay/AgroParisTech/INRAE
+    orcid: 0000-0002-3629-3429
     email: julien.chiquet@inrae.fr
     corresponding: true
   - name: Chloé Azencott
     affiliation: MinesParisTech
+    orcid: 0000-0003-1003-301X
   - name: François-David Collin
     affiliation: IMAG/CNRS
+    orcid: 0000-0002-8374-7163
   - name: Ghislain Durif
     affiliation: LBMC/CNRS/ENS Lyon
+    orcid: 0000-0003-2567-1401
   - name: Mathurin Massias
     affiliation: INRIA Lyon OCKHAM
+    orcid: 0000-0002-8950-0356
   - name: Pierre Neuvial
     affiliation: IMT/CNRS
+    orcid: 0000-0003-3584-9998
   - name: Nelle Varoquaux
     afiliation: Université Grenoble Alpes/CNRS
+    orcid: 0000-0002-8748-6546
 format:
   computo-pdf: default
 bibliography: references.bib

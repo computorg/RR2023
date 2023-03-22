@@ -60,16 +60,16 @@ Submissions require both scientific content (equations, codes and figures, data)
 
 The compiled notebook (HTML and PDF) is directly generated in the git repository via continuous integration (e.g., Github action or Gitlab CI) and published, if successful, to a web page (e.g. gh-page). The PDF and the git repository address are then submitted to our submission platform.
 
-::: {.callout-warning}
-### **Warning**
-*Computo* is not just about publishing a notebook and proving that it can be compiled with CI! This part of the process is what we call _"Editorial Reproducibility"_. _"Scientific"_ or _"numerical"_ reproducibility^[We don't ask people reproducing their data... yet!] ^[We also don't ask for bit-wise reproducibility but at least statistical reproducibility.] of the analyses is also mandatory, on top of classical peer-review evaluation.
-:::
-
 ::: {.callout-note}
 ### On the use of [Quarto](https://quarto.org/)
 
 Our choice to rely on `Quarto` has been carefully considered. Leveraging its experience in literate programming [@knuth1984] with [`Rmarkdown`](https://pkgs.rstudio.com/rmarkdown/) [@rmarkdown] and relying on top community tools like universal document converter [`Pandoc`](https://pandoc.org/), RStudio/Posit developed [`Quarto`](https://quarto.org/), a standalone, language-agnostic publishing tool^[including support for R, Python, Julia and Observable JS]. This point was decisive for the editorial committee of *Computo*, which in no way wishes to privilege one language over another. We thus encourage authors to use Quarto, which hopefully offer numerous publishing oriented features, a centralized workflow which facilitates the final production, and a literate programming experience well adapted to VScode/Rstudio/Neovim users.
-::: 
+:::
+
+::: {.callout-warning}
+### **Warning**
+*Computo* is not just about publishing a notebook and proving that it can be compiled with CI! This part of the process is what we call _"Editorial Reproducibility"_. _"Scientific"_ or _"numerical"_ reproducibility^[We don't ask people reproducing their data... yet!] ^[We also don't ask for bit-wise reproducibility but at least statistical reproducibility.] of the analyses is also mandatory, on top of classical peer-review evaluation.
+:::
 
 ### Available templates
 

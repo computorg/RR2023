@@ -91,7 +91,7 @@ Submitted papers are reviewed by external reviewers selected by the Associate Ed
 
 In order to ensure an efficient reviewing process, authors are requested upon submission to suggest the names of four potential referees. To avoid conflicts of interests, recent co-authors or collaborators should not be suggested.
 
-*Computo*’s accepted papers are published electronically immediately upon receipt under CC BY 4.0 license. Authors retain the copyright and full publishing rights without restrictions.
+*Computo*’s accepted papers are published electronically immediately upon receipt under [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/) [@ccby4]. Authors retain the copyright and full publishing rights without restrictions.
 
 At the moment, *Computo* relies on [Scholastica](https://scholasticahq.com/) for the review process. We plan to migrate very soon to the [openreview plateform](https://openreview.net/).
 

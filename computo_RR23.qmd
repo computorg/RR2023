@@ -23,23 +23,18 @@ author:
     afiliation: Université Grenoble Alpes/CNRS
 format:
   computo-pdf: default
-csl: cell-numeric.csl
 bibliography: references.bib
+csl: journal-of-open-research-software.csl
 abstract: >
   Computo is a newborn journal published by the [French Statistical Society](https://sfds.asso.fr/) which aims at promoting computational/algorithmic contributions in statistics and machine learning. In order to achieve this goal, Computo goes beyond classical static publications by leveraging technical advances in literate programming and scientific reporting. We present in this talk the solution that we put in place so far to support both editorial and scientific reproducibility, that relies on community-based tools like Quarto, Github actions and open review. See our webpage \url{https://computo.sfds.asso.fr/}, and github group \url{https://github.com/computorg}.
 keywords: [Reproducible research -- Statistics -- Machine-Learning -- Quarto -- R -- Python -- Julia]
 ---
 
-## TODO
-
-- [ ] add citation for quarto
-- [ ] add a comment about bit-wise reproducibility (which is not expected)
-
 ## About
 
 ### Aims and scope
 
-*Computo* has been created in the context of a reproducibility crisis in science [@ioannidis2005; @steen2011; @allison2016; @bastian2016; @whitfield2021] which calls for higher standards in the publication of scientific results. *Computo* aims at promoting computational and algorithmic contributions in statistics and machine learning (ML) that provide insight into which models or methods are the most appropriate to address a specific scientific question. The journal welcomes the following types of contributions:
+*Computo* has been created in the context of a reproducibility crisis in science [@ioannidis2005; @steen2011; @allison2016; @bastian2016; @whitfield2021], which calls for improvements of scientific research implementation [@desquilbet2019; @the_turing_way2022] and for higher standards in the publication of scientific results. *Computo* aims at promoting computational and algorithmic contributions in statistics and machine learning (ML) that provide insight into which models or methods are the most appropriate to address a specific scientific question. The journal welcomes the following types of contributions:
 
 1. New methods with original stats/ML developments, or numerical studies that illustrate theoretical results in stats/ML;
 2. Case studies or surveys on stats/ML methods to address a specific (type of) question in data analysis, neutral comparison studies that provide insight into when, how, and why the compared methods perform well or less well;
@@ -47,7 +42,7 @@ keywords: [Reproducible research -- Statistics -- Machine-Learning -- Quarto -- 
 
 ### An open access journal with reproducible contributions
 
-*Computo* is free for readers and authors. It is a diamond open access journal @ancion2022 which means that all contents are freely published without any fee for the authors, and are freely available without any charge to the reader or their institution. Users are allowed to read, download, copy, distribute, print, search, or link to the full texts of the articles, or use them for any other lawful purpose, without asking prior permission from the publisher or the author^[as long as original authors are duly cited]. This is in accordance with the [Budapest Open Access Initiative (BOAI)](https://www.budapestopenaccessinitiative.org/) definition of open access.
+*Computo* is free for readers and authors. It is a diamond open access journal [@ancion2022] which means that all contents are freely published without any fee for the authors, and are freely available without any charge to the reader or their institution. Users are allowed to read, download, copy, distribute, print, search, or link to the full texts of the articles, or use them for any other lawful purpose, without asking prior permission from the publisher or the author^[as long as original authors are duly cited]. This is in accordance with the [Budapest Open Access Initiative (BOAI)](https://www.budapestopenaccessinitiative.org/) definition of open access and with the [Plan S](https://www.coalition-s.org/addendum-to-the-coalition-s-guidance-on-the-implementation-of-plan-s/principles-and-implementation/) initiative [@planS].
 
 The reproducibility of numerical results is a necessary condition for publication in *Computo*. In particular, submissions must include all necessary data (e.g. via Zenodo repositories) and codes. For contributions featuring the implementation of methods/algorithms, the quality of the provided code is assessed during the review process.
 
@@ -57,24 +52,30 @@ The reviews are open, i.e. visible to any reader after acceptance of the contrib
 
 ### Overview
 
-Submissions require both scientific content (equations, codes and figures, data) and a proof that this content is reproducible. This is achieved by means of i) a notebook system, ii) a virtual environment fixing the dependencies and iii) continuous integration (plus, if needed, an external data repository to store data files such as [Zenodo](https://zenodo.org/) @zenodo or [OSF](https://osf.io/) @foster2017). A *Computo* submission is thus a git repository containing
+Submissions require both scientific content (equations, codes and figures, data) and a proof that this content is reproducible. This is achieved by means of i) a notebook system, ii) a virtual environment fixing the dependencies and iii) continuous integration (plus, if needed, an external data repository to store data files such as [Zenodo](https://zenodo.org/) [@zenodo] or [OSF](https://osf.io/) [@foster2017]). A *Computo* submission is thus a git repository containing
 
 - the source file of the notebook with auxiliary files: a markdown file with yaml metadata and some statics files, e.g. figures or small .csv data tables
 - configuration files to set up the dependencies in a virtual environment
 - configuration files to set up the continuous integration rendering the final documents
 
-The compiled notebook (HTML and PDF) is directly generated in the git repository via continuous integration (e.g., Github action or Gitlab CI) and published, if successful, to a web page (e.g. gh-page). The PDF and the git repository address are then submitted to the our submission platform.
+The compiled notebook (HTML and PDF) is directly generated in the git repository via continuous integration (e.g., Github action or Gitlab CI) and published, if successful, to a web page (e.g. gh-page). The PDF and the git repository address are then submitted to our submission platform.
 
 ::: {.callout-warning}
 ### **Warning**
-*Computo* is not just about publishing a notebook and proving that it can be compiled with CI! This part of the process is what we call _"Editorial Reproducibility"_. _"Scientific"_ or _"numerical"_ reproducibility^[We don't ask people reproducing their data... yet!] of the analyses is also mandatory, on top of classical peer-review evaluation.
+*Computo* is not just about publishing a notebook and proving that it can be compiled with CI! This part of the process is what we call _"Editorial Reproducibility"_. _"Scientific"_ or _"numerical"_ reproducibility^[We don't ask people reproducing their data... yet!] ^[We also don't ask for bit-wise reproducibility but at least statistical reproducibility.] of the analyses is also mandatory, on top of classical peer-review evaluation.
 :::
+
+::: {.callout-note}
+### On the use of [Quarto](https://quarto.org/)
+
+Our choice to rely on `Quarto` has been carefully considered. Leveraging its experience in literate programming [@knuth1984] with [`Rmarkdown`](https://pkgs.rstudio.com/rmarkdown/) [@rmarkdown] and relying on top community tools like universal document converter [`Pandoc`](https://pandoc.org/), RStudio/Posit developed [`Quarto`](https://quarto.org/), a standalone, language-agnostic publishing tool^[including support for R, Python, Julia and Observable JS]. This point was decisive for the editorial committee of *Computo*, which in no way wishes to privilege one language over another. We thus encourage authors to use Quarto, which hopefully offer numerous publishing oriented features, a centralized workflow which facilitates the final production, and a literate programming experience well adapted to VScode/Rstudio/Neovim users.
+::: 
 
 ### Available templates
 
-`Quarto`-based Templates are available from our [github group](https://github.com/computorg/), which serves as material for starting to write a submission, and as a documentation for doing so. We developed a [Quarto extension](https://github.com/computorg/computo-quarto-extension) and dedicated templates for setting everything up either for R, Python and Julia users:
+`Quarto`-based templates are available from our [github group](https://github.com/computorg/), which serves as material for starting to write a submission, and as a documentation for doing so. We developed a [Quarto extension](https://github.com/computorg/computo-quarto-extension) and dedicated templates for setting everything up either for R, Python and Julia users:
 
-- [*Computo* Template for R users](https://github.com/computorg/template-computo-R)
+- [*Computo* Template for R users](https://github.com/computorg/template-computo-R)^[`Quarto` R-based notebooks are similar to Rmarkdown notebooks and `Quarto` natively understand Rmarkdown notebook.]
 - [*Computo* Template for Python users](https://github.com/computorg/template-computo-python)
 - [*Computo* Template for Julia users](https://github.com/computorg/template-computo-julia)
 
@@ -84,12 +85,6 @@ If you are attached to Jupyter book or do not prefer to use Quarto, you are stil
 - [Jupyter Myst template](https://github.com/computorg/template-computo-myst)
 -->
 
-::: {.callout-note}
-### On the use of [Quarto](https://quarto.org/)
-
-Our choice to rely on Quarto has been carefully considered. Leveraging its experience in literate programming with `Rmarkdown` and relying on top community tools like `Pandoc`, RStudio/Posit developed `Quarto`, a standalone, language-agnostic publishing tool^[including support for R, Python, Julia and Observable JS]. This point was decisive for the editorial committee of *Computo*, which in no way wishes to privilege one language over another. We thus encourage authors to use Quarto, which hopefully offer numerous publishing oriented features, a centralized workflow which facilitates the final production, and a literate programming experience well adapted to VScode/Rstudio/Neovim users.
-::: 
-
 ##  Reviewing and publication
 
 Submitted papers are reviewed by external reviewers selected by the Associate Editor in charge of the paper. *Computo* strives for fast reviewing cycles, but cannot provide strict guarantees on the matter; the current time between submission and publication is under six months.
@@ -98,7 +93,7 @@ In order to ensure an efficient reviewing process, authors are requested upon su
 
 *Computo*’s accepted papers are published electronically immediately upon receipt under CC BY 4.0 license. Authors retain the copyright and full publishing rights without restrictions.
 
-At the moment, *Computo* relies on Scholastica for the review process. We plan to migrate very soon to the [openreview plateform](https://openreview.net/).
+At the moment, *Computo* relies on [Scholastica](https://scholasticahq.com/) for the review process. We plan to migrate very soon to the [openreview plateform](https://openreview.net/).
 
 Once a manuscript is accepted, its reviews are made available on the finally rendered article as an issues associated to the git repository. Reviewers can choose to remain anonymous or not.
 

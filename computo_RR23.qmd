@@ -75,7 +75,7 @@ Our choice to rely on `Quarto` has been carefully considered. Leveraging its exp
 
 `Quarto`-based templates are available from our [github group](https://github.com/computorg/), which serves as material for starting to write a submission, and as a documentation for doing so. We developed a [Quarto extension](https://github.com/computorg/computo-quarto-extension) and dedicated templates for setting everything up either for R, Python and Julia users:
 
-- [*Computo* Template for R users](https://github.com/computorg/template-computo-R)^[`Quarto` R-based notebooks are similar to Rmarkdown notebooks and `Quarto` natively understand Rmarkdown notebook.]
+- [*Computo* Template for R users](https://github.com/computorg/template-computo-R)^[`Quarto` R-based notebooks are similar to Rmarkdown notebooks which are also natively supported by `Quarto`.]
 - [*Computo* Template for Python users](https://github.com/computorg/template-computo-python)
 - [*Computo* Template for Julia users](https://github.com/computorg/template-computo-julia)
 

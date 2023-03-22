@@ -15,10 +15,10 @@ author:
     affiliation: IMAG/CNRS
   - name: Ghislain Durif
     affiliation: LBMC/CNRS/ENS Lyon
-  - name: Pierre Neuvial
-    affiliation: IMT/CNRS
   - name: Mathurin Massias
     affiliation: INRIA Lyon OCKHAM
+  - name: Pierre Neuvial
+    affiliation: IMT/CNRS
   - name: Nelle Varoquaux
     afiliation: Université Grenoble Alpes/CNRS
 format:

@@ -1,4 +1,4 @@
-#  Computo :An academic journal promoting reproductibility via Quarto and Continuous Integration
+#  Computo: An academic journal promoting reproductibility via Quarto and Continuous Integration
 
 by 
 
